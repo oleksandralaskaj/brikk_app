@@ -23,8 +23,8 @@ export const EstateComparison = () => {
             }
         </div>
         <div className={'options'}>
-            <OptionsItem option={'A'}/>
-            <OptionsItem option={'B'}/>
+            <OptionsItem optionKey={'A'}/>
+            <OptionsItem optionKey={'B'}/>
         </div>
     </div>
 }

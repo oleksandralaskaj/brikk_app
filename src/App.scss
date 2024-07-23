@@ -80,6 +80,10 @@ $color-white: rgb(255, 255, 255);
       border-radius: 0.5rem;
       padding: 0.5rem;
 
+      &__image {
+        height: 20rem;
+        width: 30rem;
+      }
       &__title {
         font: {
           size: 1rem;
@@ -90,6 +94,7 @@ $color-white: rgb(255, 255, 255);
       }
 
       &__property {
+        align-items: baseline;
         display: flex;
         justify-content: space-between;
         padding: 0.5rem;
@@ -109,6 +114,17 @@ $color-white: rgb(255, 255, 255);
 
         &--red {
           background-color: $color-red;
+        }
+      }
+
+      &__agency {
+        align-items: center;
+        display: flex;
+        gap: 0.5rem;
+        padding: 1rem;
+
+        &-image {
+          height: 5rem;
         }
       }
     }

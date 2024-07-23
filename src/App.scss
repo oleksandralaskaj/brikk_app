@@ -1,0 +1,116 @@
+$color-blue: rgb(19, 127, 167);
+$color-gray: #989797;
+$color-green: #a2eba2;
+$color-red: #eba2a2;
+$color-white: rgb(255, 255, 255);
+
+.page {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  gap: 1rem;
+  padding: 1rem;
+
+  &-title {
+    color: $color-gray;
+    font-size: 3rem;
+    margin: 0;
+  }
+
+  hr {
+    width: 100vw;
+  }
+
+  .list {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+
+    &-item {
+      position: relative;
+      width: 10rem;
+
+      &__overlay {
+        align-items: center;
+        border: $color-blue 0.5rem solid;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        opacity: 60%;
+        position: absolute;
+        width: inherit;
+
+        &-letter {
+          align-items: center;
+          background-color: $color-blue;
+          border-radius: 2rem;
+          color: $color-white;
+          display: flex;
+          font-weight: 600;
+          justify-content: center;
+          height: 2rem;
+          width: 2rem;
+        }
+      }
+
+      &__image {
+        height: 4rem;
+        object-fit: cover;
+        width: inherit;
+      }
+
+      &__name {
+        font-size: 0.75rem;
+        margin: 0;
+        padding: 0.25rem;;
+      }
+    }
+  }
+
+  .options {
+    display: flex;
+    gap: 1rem;
+    justify-content: stretch;
+
+    &-item {
+      border: $color-gray 1px solid;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+
+      &__title {
+        font: {
+          size: 1rem;
+          weight: 400;
+        }
+        margin: 0;
+        padding: 0.5rem;
+      }
+
+      &__property {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem;
+
+        &-name {
+          font-weight: 600;
+          margin: 0;
+        }
+
+        &-value {
+          margin: 0;
+        }
+
+        &--green {
+          background-color: $color-green;
+        }
+
+        &--red {
+          background-color: $color-red;
+        }
+      }
+    }
+  }
+}

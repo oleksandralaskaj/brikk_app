@@ -1,11 +1,10 @@
-import {useEffect, useState} from "react";
-import {useEstateContext} from "../contexts/EstateContext.jsx";
+import {useEstateContext} from '../contexts/EstateContext.jsx';
 
 export const OptionsItem = ({optionKey}) => {
     const {optionA, optionB} = useEstateContext()
 
-    const currentOption = optionKey === "A" ? optionA : optionB
-    const alternativeOption = optionKey === "A" ? optionB : optionA
+    const currentOption = optionKey === 'A' ? optionA : optionB
+    const alternativeOption = optionKey === 'A' ? optionB : optionA
 
     const determineClass = (propertyName) => {
         switch (propertyName) {
@@ -28,7 +27,7 @@ export const OptionsItem = ({optionKey}) => {
 
     return (
         <div className={'options-item'}>
-            <img src={currentOption.images[0]} alt="property-photo" className={'options-item__image'}/>
+            <img src={currentOption.images[0]} alt='property-photo' className={'options-item__image'}/>
             <h2 className={'options-item__title'}>{currentOption.name}</h2>
             <div className={`options-item__property ${determineClass('prize_czk')}`}>
                 <p className={'options-item__property-name'}>Price</p>
@@ -47,7 +46,7 @@ export const OptionsItem = ({optionKey}) => {
                 <p className={'options-item__property-value'}>{currentOption.land_area} m<sup>2</sup></p>
             </div>
             {currentOption.company_logo && <div className={'options-item__agency'}>
-                <img src={currentOption.company_logo} alt="agency-logo" className={'options-item__agency-image'}/>
+                <img src={currentOption.company_logo} alt='agency-logo' className={'options-item__agency-image'}/>
                 <p className={'options-item__agency-name'}>{currentOption.company_name}</p>
             </div>}
         </div>)

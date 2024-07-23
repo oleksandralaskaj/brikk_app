@@ -1,6 +1,6 @@
-import {useEstateContext} from "../contexts/EstateContext.jsx";
-import {ListItem} from "./ListItem.jsx";
-import {OptionsItem} from "./OptionsItem.jsx";
+import {useEstateContext} from '../contexts/EstateContext.jsx';
+import {ListItem} from './ListItem.jsx';
+import {OptionsItem} from './OptionsItem.jsx';
 
 export const EstateComparison = () => {
     const {estate, isLoaded} = useEstateContext()
